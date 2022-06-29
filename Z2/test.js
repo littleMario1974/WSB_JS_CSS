@@ -1,12 +1,13 @@
-function getResult() {
+function getFact() {
 
 
-    const amount1 = document.getElementById("amount1").value;
-    const amount2 = document.getElementById("amount2").value;
+    const animalType = document.getElementById("animalType").value;
+    const number = document.getElementById("number").value;
 
-    axios.get("https://api.exchangerate.host/convert?from=" + amount1 +"&to" + amount2).then(response => {
 
-        const result = response.data.text;
-        document.getElementById("result").innerText = result;
+    axios.get("https://cat-fact.herokuapp.com/facts/random?animal_type=" + animalType + "&amount=" + number).then(response => {
+        response.data.forEach(d => console.log(d.text));
+        const fact = response.data.text;
+        document.getElementById("fact").innerText = fact;
     });
 }

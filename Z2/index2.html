@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciekawostki o zwierzętach</title>
+
+    <script src="test.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<select id="animalType">
+    <option value="cat">Kot</option>
+    <option value="dog">Pies</option>
+    <option value="horse">Kon</option>
+    <option value="snail">Slimak</option>
+</select>
+
+<select id="number">
+    <option value=1>Jeden</option>
+    <option value=2>Dwa</option>
+    <option value=3>Trzy</option>
+    <option value=4>Cztery</option>
+</select>
+
+<button onclick="getFact()">Pobierz dane</button>
+
+<div id="fact"></div>
+
+</body>
+</html>
